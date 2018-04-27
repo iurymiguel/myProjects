@@ -1,0 +1,46 @@
+page-rules {
+
+        ion-card.card.card-md {
+                display:  inline-block;
+                height: 80px;
+        }
+
+        ion-fab.fab-button {
+                position: relative;
+                float:  right;
+                bottom:  -85%;
+                margin-right: 3%;
+        }
+
+        button.disable-hover.button.button-default{
+                position: relative;
+                float: right;
+                bottom: 5px;        
+        }
+
+        ion-label.rule-label.label {
+                position:  relative;
+                float:  left;
+                bottom: 5px;
+        }
+
+        button.btn-arrow {
+                position:  relative;
+                right: -40%;
+                top: 7px;
+                background-color: Transparent;
+                border: none;
+                outline: none;
+                height:  30px;
+                width:  30px;
+        }
+
+        button.btn-expandable {
+                position:  relative;
+                float:  left;
+                width: 100%;
+                
+            }
+   
+            
+}
