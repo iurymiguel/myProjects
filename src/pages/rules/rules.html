@@ -15,7 +15,7 @@
 
 <ion-content padding>
 
-  <ion-card>
+  <ion-card *ngFor="let rule of rules">
 
     <ion-card-content>
 
@@ -34,11 +34,9 @@
         <ion-icon name="more"></ion-icon>
       </button>
 
-
-      <button class="btn-expandable">
-          <ion-icon ios="ios-arrow-down" md="md-arrow-down"></ion-icon>
-      </button>
-
+      <expandable [expandHeight]="itemExpandHeight" [expanded]="itemExpanded">
+        Hello World
+      </expandable>
 
     </ion-card-content>
 

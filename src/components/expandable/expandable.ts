@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 /**
  * Generated class for the ExpandableComponent component.
@@ -12,11 +12,24 @@ import { Component } from '@angular/core';
 })
 export class ExpandableComponent {
 
-  text: string;
+  @Input('expanded') expanded;
+  @Input('expandHeight') expandHeight;
+
+  currentHeight: number = 0;
 
   constructor() {
     console.log('Hello ExpandableComponent Component');
-    this.text = 'Hello World';
   }
+
+
+
+  ngAfterViewInit(){
+    console.log(this.expanded);
+    console.log(this.expandHeight);
+
+    
+
+  }
+
 
 }

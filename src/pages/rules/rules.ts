@@ -16,6 +16,10 @@ import { PopoverPage } from '../popover/popover';
 })
 export class RulesPage {
 
+  public rules: any = new Array(10);
+  itemExpanded: boolean = false;
+  itemExpandHeight: number = 200;
+  
   constructor(public navCtrl: NavController, public navParams: NavParams, private popoverCtrl: PopoverController) {
   }
 

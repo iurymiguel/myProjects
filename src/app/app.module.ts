@@ -10,6 +10,7 @@ import { ScenariosPage } from '../pages/scenarios/scenarios';
 import { RulesPage } from '../pages/rules/rules';
 import { MenuPage } from '../pages/menu/menu';
 import { PopoverPageModule } from '../pages/popover/popover.module';
+import { ExpandableComponent } from '../components/expandable/expandable';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { PopoverPageModule } from '../pages/popover/popover.module';
     ScenariosPage,
     RulesPage,
     MenuPage,
-    TabsPage
+    TabsPage,
+    ExpandableComponent
   ],
   imports: [
     BrowserModule,
