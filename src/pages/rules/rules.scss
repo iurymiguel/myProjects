@@ -3,6 +3,7 @@ page-rules {
         ion-card.card.card-md {
                 display:  inline-block;
                 height: 80px;
+                max-height: 300px;
         }
 
         ion-fab.fab-button {
@@ -42,7 +43,14 @@ page-rules {
                 
             }
    
-            button {
-                align-items: baseline;
+            button.btn-profile {
+                background-color: Transparent;
+                border: none;
+                outline: none;
+                position:  relative;
+                float:  left;
             }
+           #card{
+                perspective: 1000px;
+           }
 }
