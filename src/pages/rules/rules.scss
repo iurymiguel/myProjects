@@ -1,10 +1,17 @@
 page-rules {
 
-        ion-card.card.card-md {
+        .non-expanded {
                 display:  inline-block;
-                height: 80px;
-                max-height: 300px;
+                height: 100px;
+                transition: 0.5s linear;
         }
+
+        .expanded{
+                display:  inline-block;
+                height: 200px; 
+                transition: 0.5s linear;
+        }
+
 
         ion-fab.fab-button {
                 position: relative;
@@ -50,7 +57,18 @@ page-rules {
                 position:  relative;
                 float:  left;
             }
-           #card{
-                perspective: 1000px;
-           }
+          
+           button.btn-profile {
+                font-size:  25px;
+                position:  relative;
+                float:  left;
+                background-color: Transparent;
+                border: none;
+                outline: none;
+        }
+
+        ion-title{
+                position: relative;
+                top: 6px;
+        }
 }

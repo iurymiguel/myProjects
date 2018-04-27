@@ -5,7 +5,6 @@ import { RulesPage } from '../rules/rules';
 import { MenuPage } from '../menu/menu';
 
 @Component({
-  selector: 'page-tabs',
   templateUrl: 'tabs.html'
 })
 export class TabsPage {

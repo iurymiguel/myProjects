@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { PopoverController } from 'ionic-angular';
+import { PopoverController, reorderArray  } from 'ionic-angular';
 import { PopoverPage } from '../popover/popover';
 /**
  * Generated class for the RulesPage page.
@@ -11,51 +11,83 @@ import { PopoverPage } from '../popover/popover';
 
 @IonicPage()
 @Component({
-  selector: 'page-rules',
-  templateUrl: 'rules.html',
+    selector: 'page-rules',
+    templateUrl: 'rules.html',
 })
 export class RulesPage {
 
-  items: any = [];
+    items: any = [];
     itemExpandHeight: number = 100;
- 
+
     constructor(public navCtrl: NavController, private popoverCtrl: PopoverController) {
- 
+
         this.items = [
-            {expanded: false},
-            {expanded: false},
-            {expanded: false},
-            {expanded: false},
-            {expanded: false},
-            {expanded: false},
-            {expanded: false},
-            {expanded: false},
-            {expanded: false}
+            {
+                name: 'Regra 1',
+                expanded: false
+            },
+            {
+                name: 'Regra 2',
+                expanded: false
+            },
+            {
+                name: 'Regra 3',
+                expanded: false
+            },
+            {
+                name: 'Regra 4',
+                expanded: false
+            },
+            {
+                name: 'Regra 5',
+                expanded: false
+            },
+            {
+                name: 'Regra 6',
+                expanded: false
+            },
+            {
+                name: 'Regra 7',
+                expanded: false
+            },
+            {
+                name: 'Regra 8',
+                expanded: false
+            },
+            {
+                name: 'Regra 9',
+                expanded: false
+            }
         ];
- 
+
     }
- 
-    expandItem(item){
- 
+
+    reorderItems(indexes) {
+        this.items = reorderArray(this.items, indexes);
+    }
+
+
+    expandItem(item) {
+
         this.items.map((listItem) => {
- 
-            if(item == listItem){
+
+            if (item == listItem) {
                 listItem.expanded = !listItem.expanded;
             } else {
                 listItem.expanded = false;
             }
- 
+
             return listItem;
- 
+
         });
- 
+
     }
 
-  presentPopover(event){
-    let popover = this.popoverCtrl.create(PopoverPage);
-    popover.present({
-      ev: event
-    });
-  }
+    presentPopover(event) {
+        let popover = this.popoverCtrl.create(PopoverPage);
+        popover.present({
+            ev: event
+        });
+    }
 
 }
