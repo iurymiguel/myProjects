@@ -3,12 +3,13 @@ page-rules {
         .non-expanded {
                 display:  inline-block;
                 height: 100px;
-                transition: 0.5s linear;
+                transition: linear;
         }
 
         .expanded{
                 display:  inline-block;
-                height: 200px; 
+                height: 200px;
+                transition: linear; 
         }
 
 
@@ -42,21 +43,7 @@ page-rules {
                 width:  30px;
         }
 
-        button.btn-expandable {
-                position:  relative;
-                float:  left;
-                width: 100%;
-                
-            }
-   
-            button.btn-profile {
-                background-color: Transparent;
-                border: none;
-                outline: none;
-                position:  relative;
-                float:  left;
-            }
-          
+       
            button.btn-profile {
                 font-size:  25px;
                 position:  relative;

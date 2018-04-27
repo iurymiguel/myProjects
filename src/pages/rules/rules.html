@@ -14,7 +14,7 @@
 </ion-header>
 
 <ion-content padding>
-<!--
+  <!--
   <ion-list>
     <ion-item >
       <expandable [expandHeight]="itemExpandHeight" [expanded]="item.expanded">
@@ -26,8 +26,8 @@
   </ion-list>
 -->
 
-  <ion-list  reorder="true" (ionItemReorder)="reorderItems($event)">
-    <ion-card *ngFor="let item of items" >
+  <ion-list reorder="true" (ionItemReorder)="reorderItems($event)">
+    <ion-card *ngFor="let item of items">
 
       <ion-card-content [ngClass]="item.expanded ? expanded : non-expanded">
 
@@ -49,7 +49,7 @@
           <ion-icon ios="ios-arrow-down" md="md-arrow-down"></ion-icon>
         </button>
 
-        <expandable [expandHeight]="itemExpandHeight" [expanded]="item.expanded">
+        <expandable *ngIf="item.expanded" [expandHeight]="itemExpandHeight" [expanded]="item.expanded">
 
         </expandable>
 
