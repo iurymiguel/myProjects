@@ -27,9 +27,9 @@
 -->
 
   <ion-list  reorder="true" (ionItemReorder)="reorderItems($event)">
-    <ion-card *ngFor="let item of items" [ngClass]="item.expanded ? expanded : non-expanded">
+    <ion-card *ngFor="let item of items" >
 
-      <ion-card-content>
+      <ion-card-content [ngClass]="item.expanded ? expanded : non-expanded">
 
         <ion-label class="rule-label">{{item.name}}</ion-label>
 
@@ -40,7 +40,6 @@
         <button class="btn-arrow">
           <ion-icon ios="ios-arrow-down" md="md-arrow-down"></ion-icon>
         </button>
-
 
         <button ion-button icon-only (click)="presentPopover($event)">
           <ion-icon name="more"></ion-icon>

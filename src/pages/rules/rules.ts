@@ -68,19 +68,7 @@ export class RulesPage {
 
 
     expandItem(item) {
-
-        this.items.map((listItem) => {
-
-            if (item == listItem) {
-                listItem.expanded = !listItem.expanded;
-            } else {
-                listItem.expanded = false;
-            }
-
-            return listItem;
-
-        });
-
+        item.expanded = !item.expanded;
     }
 
     presentPopover(event) {
