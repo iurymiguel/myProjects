@@ -14,34 +14,48 @@
 
 
 <ion-content padding>
-
-  <ion-card *ngFor="let rule of rules">
-
-    <ion-card-content>
-
-      <ion-label class="rule-label">Regra 1</ion-label>
-
-      <button class="btn-arrow">
-        <ion-icon ios="ios-arrow-up" md="md-arrow-up"></ion-icon>
-      </button>
-
-      <button class="btn-arrow">
-        <ion-icon ios="ios-arrow-down" md="md-arrow-down"></ion-icon>
-      </button>
-
-
-      <button ion-button icon-only (click)="presentPopover($event)">
-        <ion-icon name="more"></ion-icon>
-      </button>
-
-      <expandable [expandHeight]="itemExpandHeight" [expanded]="itemExpanded">
-        Hello World
+  <ion-list>
+    <button detail-none (click)="expandItem(item)" ion-item *ngFor="let item of items">
+      <h2>My Neighbor Totoro</h2>
+      <p>Hayao Miyazaki • 1988</p>
+      <expandable [expandHeight]="itemExpandHeight" [expanded]="item.expanded">
+        Hello people
       </expandable>
+    </button>
+  </ion-list>
+  <!--
+  <ion-list>
+    <ion-card *ngFor="let rule of rules">
 
-    </ion-card-content>
+      <ion-card-content>
 
-  </ion-card>
+        <ion-label class="rule-label">Regra 1</ion-label>
 
+        <button class="btn-arrow">
+          <ion-icon ios="ios-arrow-up" md="md-arrow-up"></ion-icon>
+        </button>
+
+        <button class="btn-arrow">
+          <ion-icon ios="ios-arrow-down" md="md-arrow-down"></ion-icon>
+        </button>
+
+
+        <button ion-button icon-only (click)="presentPopover($event)">
+          <ion-icon name="more"></ion-icon>
+        </button>
+
+        <button class="btn-arrow"  (click)="expandRule(rule)">
+          <expandable [expandHeight]="itemExpandHeight" [expanded]="rule.expanded">
+            Hello World
+          </expandable>
+        </button>
+
+
+      </ion-card-content>
+
+    </ion-card>
+  </ion-list>
+-->
   <ion-fab class="fab-button">
     <button ion-fab>
       <ion-icon name="add"></ion-icon>

@@ -16,16 +16,40 @@ import { PopoverPage } from '../popover/popover';
 })
 export class RulesPage {
 
-  public rules: any = new Array(10);
-  itemExpanded: boolean = false;
-  itemExpandHeight: number = 200;
-  
-  constructor(public navCtrl: NavController, public navParams: NavParams, private popoverCtrl: PopoverController) {
-  }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad RulesPage');
-  }
+  items: any = [];
+    itemExpandHeight: number = 100;
+ 
+    constructor(public navCtrl: NavController, private popoverCtrl: PopoverController) {
+ 
+        this.items = [
+            {expanded: false},
+            {expanded: false},
+            {expanded: false},
+            {expanded: false},
+            {expanded: false},
+            {expanded: false},
+            {expanded: false},
+            {expanded: false},
+            {expanded: false}
+        ];
+ 
+    }
+ 
+    expandItem(item){
+ 
+        this.items.map((listItem) => {
+ 
+            if(item == listItem){
+                listItem.expanded = !listItem.expanded;
+            } else {
+                listItem.expanded = false;
+            }
+ 
+            return listItem;
+ 
+        });
+ 
+    }
 
   presentPopover(event){
     let popover = this.popoverCtrl.create(PopoverPage);

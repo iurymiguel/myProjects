@@ -34,7 +34,8 @@ import { ExpandableComponent } from '../components/expandable/expandable';
     ScenariosPage,
     RulesPage,
     MenuPage,
-    TabsPage
+    TabsPage,
+    ExpandableComponent
   ],
   providers: [
     StatusBar,
