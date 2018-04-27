@@ -6,5 +6,10 @@ page-tabs{
                 background-color: Transparent;
                 border: none;
                 outline: none;
-            }
+        }
+
+        ion-title{
+                position: relative;
+                top: 6px;
+        }
 }
