@@ -1,18 +1,26 @@
 page-rules {
 
+        ion-item.item.item-block {
+                position:  relative;
+                height: 80px;
+            }
+        //class for the card non expanded
         .non-expanded {
                 display:  inline-block;
                 height: 100px;
                 transition: linear;
         }
 
+        //class for the card expanded
         .expanded{
                 display:  inline-block;
                 height: 200px;
                 transition: linear; 
         }
 
+       
 
+        //card for the floating action button 
         ion-fab.fab-button {
                 position: relative;
                 float:  right;
@@ -20,18 +28,24 @@ page-rules {
                 margin-right: 3%;
         }
 
+
         button.disable-hover.button.button-default{
                 position: relative;
                 float: right;
                 bottom: 5px;        
         }
 
+
+
+
+        //class for rule label
         ion-label.rule-label.label {
                 position:  relative;
                 float:  left;
                 bottom: 5px;
         }
 
+        //class for arrow buttons
         button.btn-arrow {
                 position:  relative;
                 right: -40%;
@@ -43,7 +57,7 @@ page-rules {
                 width:  30px;
         }
 
-       
+           //class for the profile button     
            button.btn-profile {
                 font-size:  25px;
                 position:  relative;
@@ -53,8 +67,11 @@ page-rules {
                 outline: none;
         }
 
+        //class for the title of menu bar
         ion-title{
                 position: relative;
                 top: 6px;
         }
+
+       
 }

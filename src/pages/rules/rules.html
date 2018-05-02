@@ -14,50 +14,40 @@
 </ion-header>
 
 <ion-content padding>
-  <!--
+
+
   <ion-list>
-    <ion-item >
-      <expandable [expandHeight]="itemExpandHeight" [expanded]="item.expanded">
-        <button ion-button block (click)="expandItem(item)">
-          <ion-icon ios="ios-arrow-down" md="md-arrow-down"></ion-icon>
-        </button>
-      </expandable>
-    </ion-item>
-  </ion-list>
--->
-
-  <ion-list reorder="true" (ionItemReorder)="reorderItems($event)">
-    <ion-card *ngFor="let item of items">
-
-      <ion-card-content [ngClass]="item.expanded ? expanded : non-expanded">
-
+    <ion-item-group reorder="true" (ionItemReorder)="reorderItems($event)">
+      <ion-card [ngClass]="item.expanded ? expanded : non-expanded" *ngFor="let item of items">
         <ion-label class="rule-label">{{item.name}}</ion-label>
 
-        <button class="btn-arrow">
-          <ion-icon ios="ios-arrow-up" md="md-arrow-up"></ion-icon>
-        </button>
+        <div>
+          <button class="btn-arrow">
+            <ion-icon ios="ios-arrow-up" md="md-arrow-up"></ion-icon>
+          </button>
 
-        <button class="btn-arrow">
-          <ion-icon ios="ios-arrow-down" md="md-arrow-down"></ion-icon>
-        </button>
+          <button class="btn-arrow">
+            <ion-icon ios="ios-arrow-down" md="md-arrow-down"></ion-icon>
+          </button>
 
-        <button ion-button icon-only (click)="presentPopover($event)">
-          <ion-icon name="more"></ion-icon>
-        </button>
-
-        <button ion-button block (click)="expandItem(item)">
-          <ion-icon ios="ios-arrow-down" md="md-arrow-down"></ion-icon>
+          <button ion-button icon-only (click)="presentPopover($event)">
+            <ion-icon name="more"></ion-icon>
+          </button>
+        </div>
+        <button ion-button block (click)="expandItem(item)" [ngStyle]="{'top': item.expanded ? '159px' : '3px'}">
+          <ion-icon *ngIf="item.expanded === false" name="arrow-down"></ion-icon>
+          <ion-icon *ngIf="item.expanded === true" name="arrow-up"></ion-icon>
         </button>
 
         <expandable *ngIf="item.expanded" [expandHeight]="itemExpandHeight" [expanded]="item.expanded">
-
+          Hello world!!
         </expandable>
 
-
-      </ion-card-content>
-
-    </ion-card>
+      </ion-card>
+    </ion-item-group>
   </ion-list>
+
+
   <ion-fab class="fab-button">
     <button ion-fab>
       <ion-icon name="add"></ion-icon>
