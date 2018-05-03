@@ -1,0 +1,87 @@
+page-rules {
+
+        ion-item.item.item-block {
+                height: 100px;
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                transition: 0.3s;
+                width: 100%;
+                margin-bottom: 20px;
+        }
+
+
+        expandable{
+                position: relative;
+                top: 70%;
+        }
+
+        //class for the card non expanded
+        .non-expanded {
+                display:  inline-block;
+                height: 100px;
+                transition: linear;
+        }
+
+        //class for the card expanded
+        .expanded{
+                display:  inline-block;
+                height: 200px;
+                transition: linear; 
+        }
+
+       
+
+        //card for the floating action button 
+        ion-fab.fab-button {
+                position: relative;
+                float:  right;
+                bottom:  -85%;
+                margin-right: 3%;
+        }
+
+        /*
+        button.disable-hover.button.button-default{
+                position: relative;
+                float: right;
+                bottom: 5px;        
+        }*/
+
+
+
+
+        //class for rule label
+        ion-label.rule-label.label {
+                position:  relative;
+                float:  left;
+                bottom: 5px;
+        }
+
+        //class for arrow buttons
+        button.btn-arrow {
+                position:  relative;
+                right: 30%;
+                top: 7px;
+                background-color: Transparent;
+                border: none;
+                outline: none;
+                height:  30px;
+                width:  30px;
+        }
+
+           //class for the profile button     
+           button.btn-profile {
+                font-size:  20px;
+                position:  relative;
+                float:  left;
+                background-color: Transparent;
+                border: none;
+                outline: none;
+        }
+
+        //class for the title of menu bar
+        ion-title{
+                position: relative;
+                top: 6px;
+        }
+
+       
+}
